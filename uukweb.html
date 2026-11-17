@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Toko Online</title>
+    <link rel="stylesheet" href="UUKsoal1.css">
+</head>
+<body>
+
+    <header>
+        <h1>Toko Alat Tulis</h1>
+    </header>
+
+    <section class="container-produk">
+        <article class="produk">
+            <div class="gambar"><img src="img/buku tulis.jpg" alt="Produk 1"></div
+            <h3>Buku Tulis</h3>
+            <div class="harga box">Rp 3000</div>
+        </article>
+        <article class="produk">
+            <div class="gambar"><img src="img/kotak pensil.jpg" alt="Produk 2"></div>
+            <h3>Kotak Pensil</h3>
+            <div class="harga box">Rp 15000</div>
+        </article>
+        <article class="produk">
+            <div class="gambar"><img src="img/tas.jpg" alt="Produk 3"></div>
+            <h3>Tas Sekolah</h3>
+            <div class="harga box">Rp 150000</div>
+        </article>
+    </section>
+
+    <form id="formPesan" action="#" method="get">
+        <h2>FORM PEMESANAN</h2>
+        
+        <div>
+            <label for="nama">Nama Pemesan:</label>
+            <input type="text" id="nama" name="nama" pattern="[A-Za-zÀ-ÿ\s]+" title="Nama tidak boleh diawali atau mengandung angka!" required>
+        </div>
+
+        <div>
+            <label for="hp">Nomor HP:</label>
+            <input type="tel" id="hp" name="hp" required pattern="[0-9]{10,13}" title="Isi 10 sampai 13 angka">
+        </div>
+
+        <div>
+            <label for="produk">Produk:</label>
+            <select id="produk" name="produk" required>
+                <option value="">Pilih</option>
+                <option value="Buku Tulis">Buku Tulis</option>
+                <option value="Kotak Pensil">Kotak Pensil</option>
+                <option value="Tas Sekolah">Tas Sekolah</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" name="jumlah" required min="1" max="20">
+        </div>
+
+        <div>
+            <label>Metode Bayar:</label>
+            <div class="radio-group">
+                <input type="radio" id="bayarTransfer" name="bayar" value="Transfer" required>
+                <label for="bayarTransfer">Transfer</label>
+                
+                <input type="radio" id="bayarCod" name="bayar" value="COD" required>
+                <label for="bayarCod">COD</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required minlength="10" maxlength="200"></textarea>
+        </div>
+
+        <button type="submit">Pesan</button>
+    </form>
+
+    <footer>
+        <p>Kontak toko: telp. 085789101112 | email: innekealya558@gmail.com</p>
+    </footer>
+
+</body>
+</html>
